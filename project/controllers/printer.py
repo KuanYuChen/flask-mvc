@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 from project import app
 from flask import render_template, request
-from flask.ext.wtf import Form, TextField, validators
+#from flask.ext.wtf import Form, TextField, validators
+from flask_wtf import Form
 
+from wtforms import TextField, BooleanField ,validators
 
 class CreateForm(Form):
     text = TextField(u'Text:', [validators.Length(min=1, max=20)])
